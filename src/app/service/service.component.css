@@ -1,0 +1,51 @@
+.services-content-block {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(400px, 1fr)
+  ); /* Create a responsive grid */
+  gap: 20px; /* Space between grid items */
+  padding: 30px; /* Add padding around the grid */
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+mat-card {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+mat-card-header {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-image {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.services-text-block {
+  text-align: center;
+  align-items: center;
+}
+
+.services-text-block h1 {
+  font-size: 2rem;
+}
+
+.services-text-block p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .services-content-block {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0;
+  }
+}

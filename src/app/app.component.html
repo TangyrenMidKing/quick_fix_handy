@@ -1,0 +1,6 @@
+<app-nav-bar *ngIf="!isExpired()"></app-nav-bar>
+<router-outlet *ngIf="!isExpired()"></router-outlet>
+
+<div *ngIf="isExpired()" class="expired-message">
+    <h1>Likewise Ventures LLC is no longer in business.</h1>
+</div>

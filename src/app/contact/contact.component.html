@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="contact-container">
+    <form      
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <div *ngIf="!showContactResult">
+        <h2 class="contact-title">{{ "scheduleService" | translate }}</h2>
+        <mat-form-field appearance="fill">
+          <mat-label>{{ "name" | translate }}</mat-label>
+          <input matInput formControlName="name" required />
+          <mat-error *ngIf="contactForm.get('name')?.hasError('required')"
+            >{{ "name" | translate }} {{ "isRequired" | translate }}.</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>{{ "phone" | translate }}</mat-label>
+          <input matInput formControlName="phone" required />
+          <mat-error *ngIf="contactForm.get('phone')?.hasError('required')"
+            >{{ "phone" | translate }}
+            {{ "isRequired" | translate }}.</mat-error
+          >
+          <mat-error *ngIf="contactForm.get('phone')?.hasError('pattern')"
+            >{{ "phone" | translate }}
+            {{ "invalidPhone" | translate }}.</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>{{ "email" | translate }}</mat-label>
+          <input matInput formControlName="email" required />
+          <mat-error *ngIf="contactForm.get('email')?.hasError('required')"
+            >{{ "email" | translate }}
+            {{ "isRequired" | translate }}.</mat-error
+          >
+          <mat-error *ngIf="contactForm.get('email')?.hasError('email')"
+            >{{ "email" | translate }}
+            {{ "invalidEmail" | translate }}.</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>{{ "availableTime" | translate }}</mat-label>
+          <input matInput formControlName="availableTime" required />
+          <mat-error
+            *ngIf="contactForm.get('availableTime')?.hasError('required')"
+            >{{ "availableTime" | translate }}
+            {{ "isRequired" | translate }}.</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>{{ "address" | translate }}</mat-label>
+          <input matInput formControlName="address" required />
+          <mat-error *ngIf="contactForm.get('address')?.hasError('required')"
+            >{{ "address" | translate }}
+            {{ "isRequired" | translate }}.</mat-error
+          >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>{{ "comment" | translate }}</mat-label>
+          <textarea
+            matInput
+            formControlName="comment"
+            placeholder="{{ 'commentPlaceholder' | translate }}"
+          ></textarea>
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="isSubmitting"
+        >
+          {{ "submit" | translate }}
+        </button>
+      </div>
+      <div class="contact-result" *ngIf="showContactResult">
+        <h2>🎉{{ "contactResult1" | translate }}🎉</h2>
+        <h2>{{ "contactResult2" | translate }}</h2>
+      </div>
+    </form>
+  </div>
+</div>

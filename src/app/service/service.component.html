@@ -1,0 +1,19 @@
+<div class="services-container">
+  <div class="services-text-block">
+    <h1>{{ 'OurServices' | translate }}</h1>
+    <p>
+      {{ 'OurServicesDescription' | translate }}
+    </p>
+  </div>
+  <div class="services-content-block">
+    <mat-card class="card" *ngFor="let card of cards">
+      <mat-card-header>
+        <mat-card-title>{{ card.title | translate }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="card.image" alt="{{ card.title }}" />
+      <mat-card-content>
+        <p>{{ card.description | translate }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
