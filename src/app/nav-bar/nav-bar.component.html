@@ -8,7 +8,7 @@
       <button mat-button [routerLink]="['/contact']" routerLinkActive="active-contact" class="underline">{{ 'contact' | translate }}</button>
       <button mat-button [routerLink]="['/service']" routerLinkActive="active-service" class="underline">{{ 'service' | translate }}</button>
       <button mat-button [routerLink]="['/home']" routerLinkActive="active-home" class="underline">{{ 'about' | translate }}</button>
-      <button mat-button disabled></button>
+      <button mat-button disabled class="spacer-button"></button>
       @if (this.translate.currentLang !== 'zh') {
         <button mat-button (click)="changeLanguage('zh')">中文</button>
       } @if (this.translate.currentLang !== 'en') {

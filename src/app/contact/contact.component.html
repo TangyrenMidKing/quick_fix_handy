@@ -41,11 +41,11 @@
         </mat-form-field>
 
         <mat-form-field appearance="fill">
-          <mat-label>{{ "availableTime" | translate }}</mat-label>
-          <input matInput formControlName="availableTime" required />
+          <mat-label>{{ "preferredTime" | translate }}</mat-label>
+          <input matInput formControlName="preferredTime" required />
           <mat-error
-            *ngIf="contactForm.get('availableTime')?.hasError('required')"
-            >{{ "availableTime" | translate }}
+            *ngIf="contactForm.get('preferredTime')?.hasError('required')"
+            >{{ "preferredTime" | translate }}
             {{ "isRequired" | translate }}.</mat-error
           >
         </mat-form-field>

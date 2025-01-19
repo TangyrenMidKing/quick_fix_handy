@@ -35,7 +35,7 @@ export class ContactComponent {
       name: ['', Validators.required],
       phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       email: ['', [Validators.required, Validators.email]],
-      availableTime: ['', Validators.required],
+      preferredTime: ['', Validators.required],
       address: ['', Validators.required],
       comment: [''],
     });

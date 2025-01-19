@@ -6,7 +6,7 @@
   "name": "姓名",
   "phone": "电话",
   "email": "电子邮件",
-  "availableTime": "上门服务日期和时间范围",
+  "preferredTime": "可上门服务日期和时间范围",
   "address": "地址",
   "call": "电话联系",
   "submit": "提交表格",

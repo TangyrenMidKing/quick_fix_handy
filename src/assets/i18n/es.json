@@ -6,7 +6,7 @@
   "name": "Nombre",
   "phone": "Teléfono",
   "email": "Correo electrónico",
-  "availableTime": "Tiempo disponible",
+  "preferredTime": "Tiempo preferido",
   "address": "Dirección",
   "submit": "Enviar",
   "call": "Llamar",

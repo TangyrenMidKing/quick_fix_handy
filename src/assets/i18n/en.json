@@ -6,7 +6,7 @@
   "name": "Name",
   "phone": "Phone",
   "email": "Email",
-  "availableTime": "Available Time",
+  "preferredTime": "Preferred Time",
   "address": "Address",
   "submit": "Submit",
   "comment": "Comment",
