@@ -29,7 +29,7 @@
 }
 
 .cta a {
-  text-decoration: underline;
+  text-decoration: none;
   color: #ffffff;
 }
 
@@ -44,10 +44,6 @@
   font-size: 1.5rem;
   max-width: 50%;
   margin: 10px 0;
-}
-
-.cta a {
-  text-decoration: none;
 }
 
 .about-us {
@@ -147,12 +143,13 @@
 }
 
 @media (max-width: 600px) {
-  .content-overlay h2 {
+  .company-title,
+  .cta span {
     font-size: 1.5rem;
   }
 
-  .content-overlay p {
-    font-size: 1rem;
+  .company-description {
+    font-size: 1.2rem;
   }
 
   .about-us {

@@ -4,16 +4,17 @@
     <span class="company-description">
       {{ "companyDescription" | translate }}
     </span>
-    <span class="cta">
-      📞{{ "callToday" | translate }}
-      <a href="tel:+14076991123"><b>(407) 699-1123</b></a>
-    </span>
-    <span class="cta">
+    <br/>
+    <button mat-flat-button class="cta" color="primary">
+      <a href="tel:+14076991123"><b>📞(407) 699-1123</b></a>
+    </button>
+    <br/>
+    <button mat-flat-button class="cta" color="primary" routerLink="/contact">
       📅
       <a href="/contact">
         {{ "scheduleConsultation" | translate }}
       </a>
-    </span>
+    </button>
   </div>
   <div class="about-content-block">
     <div class="about-us">
