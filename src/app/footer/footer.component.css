@@ -1,0 +1,17 @@
+.footer-content-block {
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .footer-content-block {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+}

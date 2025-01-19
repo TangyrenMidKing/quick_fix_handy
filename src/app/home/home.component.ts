@@ -13,8 +13,4 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   constructor(private translate: TranslateService) {}
-
-  getCurrentYear(): number {
-    return new Date().getFullYear();
-  }
 }

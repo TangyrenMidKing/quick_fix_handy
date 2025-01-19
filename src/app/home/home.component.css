@@ -136,12 +136,6 @@
   color: #ffffff;
 }
 
-.footer-content-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @media (max-width: 600px) {
   .company-title,
   .cta span {
@@ -195,12 +189,5 @@
   .services-content-block {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 0;
-  }
-
-  .footer-content-block {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
   }
 }
