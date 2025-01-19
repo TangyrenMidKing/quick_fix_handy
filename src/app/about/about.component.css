@@ -1,0 +1,138 @@
+.about-content-block {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 20px;
+}
+
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.about-us-image-container {
+  max-width: 20%; /* Ensure it doesn't exceed 40% */
+  flex: 1;
+}
+
+.about-us-image {
+  width: 100%; /* Make image responsive */
+  height: 100%;
+}
+
+.about-us-text {
+  flex: 1; /* Allow text to take remaining space */
+  max-width: 600px; /* Set maximum width for text */
+}
+
+.about-us-title {
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.about-us-description {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.why-us-content-block {
+  display: flex;
+  width: 100%;
+}
+
+.why-us-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  width: 60%;
+}
+
+.why-us-image img {
+  height: auto;
+  width: 100%;
+}
+
+.why-us-text {
+  width: 40%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../assets/images/why-us-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-us-text h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.why-us-text ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.why-us-text ul li {
+  margin: 10px 0;
+  color: #fffbfb;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.why-us-text ul li strong {
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .about-us {
+    flex-direction: column; /* Stack items in a column on smaller screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .about-us-image-container,
+  .about-us-text {
+    max-width: 100%; /* Allow full width on smaller screens */
+    margin-left: 0; /* Remove left margin */
+    padding: 2%;
+  }
+
+  .about-us-image {
+    margin-bottom: 10px; /* Add space below the image */
+  }
+
+  .about-us-text {
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .why-us-content-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why-us-image,
+  .why-us-text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .why-us-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .why-us-text ul li {
+    text-align: center;
+  }
+}

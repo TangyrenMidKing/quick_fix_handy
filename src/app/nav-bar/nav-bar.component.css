@@ -33,7 +33,8 @@
 
 .active-home,
 .active-contact,
-.active-about {
+.active-about,
+.active-service {
   color: #bf9b30 !important;
   font-weight: bold;
 }

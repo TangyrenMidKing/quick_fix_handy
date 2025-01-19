@@ -12,7 +12,7 @@ import { FooterComponent } from './footer/footer.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'Likewise Ventures LLC';
+  title = 'Likewise Handyman';
   expirationDate = new Date('2025-03-01');
 
   isExpired(): boolean {

@@ -40,4 +40,3 @@ firebase deploy --only hosting
 
 ## Firebase Hosting
 
-https:// Likewise Ventures LLC.firebaseapp.com/
