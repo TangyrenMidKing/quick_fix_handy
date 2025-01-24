@@ -10,10 +10,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { EmailService } from '../_service/email_service';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
+
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -30,13 +32,14 @@ export class ContactComponent {
   isSubmitting: boolean = false;
   showContactResult: boolean = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private emailService: EmailService) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       email: ['', [Validators.required, Validators.email]],
       preferredTime: ['', Validators.required],
       address: ['', Validators.required],
+
       comment: [''],
     });
   }
@@ -49,16 +52,24 @@ export class ContactComponent {
 
     if (this.contactForm.valid) {
       console.log(this.contactForm.value);
-      setTimeout(() => {
-        this.isSubmitting = false;
-        this.showContactResult = true;
-        // this.emailService.sendEmail(
-        //   'likewiseventure@gmail.com',
-        //   'Contact Form Submission',
-        //   'Thank you for contacting us!',
-        //   'We will get back to you soon.'
-        // );
-      }, 2000);
+      this.isSubmitting = false;
+      this.showContactResult = true;
+      this.emailService
+        .sendEmail({
+          customer_name: this.contactForm.value.name,
+          customer_email: this.contactForm.value.email,
+          customer_phone: this.contactForm.value.phone,
+          customer_address: this.contactForm.value.address,
+          customer_preferred_time: this.contactForm.value.preferredTime,
+          subject: 'New Service Request from ' + this.contactForm.value.name,
+          customer_comment: this.contactForm.value.comment,
+        })
+        .then(() => {
+          console.log('Email sent successfully');
+        })
+        .catch((error) => {
+          console.error('Error sending email:', error);
+        });
     } else {
       console.log('Form is invalid');
       this.isSubmitting = false;

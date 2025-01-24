@@ -27,7 +27,7 @@ import { RouterModule } from '@angular/router';
 
 export class NavBarComponent {
   constructor(public translate: TranslateService) {
-    translate.use('en');
+    translate.use('zh');
   }
 
   changeLanguage(language: string) {

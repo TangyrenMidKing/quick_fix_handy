@@ -95,7 +95,7 @@
   color: #ffffff;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .about-us {
     flex-direction: column; /* Stack items in a column on smaller screens */
     align-items: center; /* Center items horizontally */
