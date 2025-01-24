@@ -1,12 +1,14 @@
 .container {
-  height: 100vh;
+  height: auto; /* Ensure the container height adjusts to content */
   width: 100%;
   background-image: url("../../assets/images/contact.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.9;
-  padding-top: 50px;
+  padding: 20px; /* Add padding to the container */
+  box-sizing: border-box; /* Include padding in width calculations */
+  overflow: hidden; /* Prevent overflow */
 }
 
 .contact-container {
@@ -15,7 +17,7 @@
   justify-content: center; /* Center the container horizontally */
   align-items: center; /* Center items vertically */
   max-width: 600px; /* Ensure the container takes full width */
-  margin: auto; /* Center the container and add top margin */
+  margin: auto; /* Center the container */
   padding: 20px; /* Add padding for better spacing */
   box-sizing: border-box; /* Include padding in width calculations */
   overflow: hidden; /* Prevent overflow */
@@ -26,9 +28,9 @@ form,
   display: flex;
   flex-direction: column;
   width: 100%; /* Full width of the container */
-  padding: 30px; /* Increased padding for better spacing */
-  border: 1px solid #ccc; /* Added border */
-  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Add padding for better spacing */
+  border: 1px solid #ccc; /* Optional: Add border */
+  border-radius: 8px; /* Optional: Rounded corners */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   background-color: rgba(
     255,
@@ -37,6 +39,7 @@ form,
     0.8
   ); /* White background with transparency for contrast */
   box-sizing: border-box; /* Include padding in width calculations */
+  margin: 0; /* Remove default margin */
 }
 
 mat-form-field {
@@ -60,15 +63,13 @@ button {
   text-align: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .contact-container {
-    padding: 10px; /* Adjusted padding on small screens */
-    margin: 20px; /* Reduced margin on small screens */
-
+    padding: 10px; /* Adjust padding on small screens */
   }
 
   form {
-    padding: 15px; /* Adjusted padding for better spacing */
+    padding: 15px; /* Adjust padding for better spacing */
   }
 
   mat-form-field {
