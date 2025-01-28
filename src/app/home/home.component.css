@@ -39,6 +39,11 @@
   margin: 10px 0;
 }
 
+.mat-dark {
+  background-color: #414141;
+  color: #fff;
+}
+
 @media (max-width: 700px) {
   .company-title,
   .cta span {

@@ -13,7 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'Likewise Handyman';
-  expirationDate = new Date('2025-03-01');
+  expirationDate = new Date('2055-03-01');
 
   isExpired(): boolean {
     return new Date() > this.expirationDate;

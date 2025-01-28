@@ -53,5 +53,10 @@
   "ExteriorWallsWindowsAndDoorsDescription": "Instalar o reemplazar paredes exteriores, ventanas y puertas",
   "OtherOutdoorRemodelingDescription": "Construir nuevas paredes divisorias, instalar puertas interiores",
   "OurServices": "Nuestros Servicios",
-  "OurServicesDescription": "Ofrecemos una amplia gama de servicios para satisfacer sus necesidades. Ya sea que necesite un nuevo piso instalado o una pared reparada, nosotros lo tenemos cubierto."
+  "OurServicesDescription": "Ofrecemos una amplia gama de servicios para satisfacer sus necesidades. Ya sea que necesite un nuevo piso instalado o una pared reparada, nosotros lo tenemos cubierto.",
+  "emailSubject": "Recibimos su mensaje",
+  "emailBody": "¡Gracias por contactarnos! Hemos recibido su solicitud y le responderemos lo antes posible, pero no más tarde de 24 horas.",
+  "emailSignature": "Atentamente,",
+  "emailName": "Equipo de Likewise Handyman",
+  "emailGreeting": "Estimado "
 } 

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -11,9 +12,12 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './service.component.css',
 })
 export class ServiceComponent {
+  constructor(private router: Router) {}
+  
   cards = [
     {
       title: 'FlooringServices',
+
       image: '../../assets/images/flooring.jpg',
       description: 'FlooringServicesDescription',
     },
@@ -48,4 +52,8 @@ export class ServiceComponent {
       description: 'ExteriorWallsWindowsAndDoorsDescription',
     },
   ];
+
+  navigateToContact() {
+    this.router.navigate(['/contact']);
+  }
 }

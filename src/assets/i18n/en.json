@@ -53,5 +53,11 @@
   "ExteriorWallsWindowsAndDoorsDescription": "Install or replace exterior walls, windows, and doors",
   "OtherOutdoorRemodelingDescription": "Build new partition walls, install interior doors",
   "OurServices": "Our Services",
-  "OurServicesDescription": "We offer a wide range of services to meet your needs. Whether you need a new floor installed or a wall repaired, we have you covered."
+  "OurServicesDescription": "We offer a wide range of services to meet your needs. Whether you need a new floor installed or a wall repaired, we have you covered.",
+  "emailSubject": "We Received Your Message",
+  "emailGreeting": "Dear ",
+  "emailBody": "Thank you for contacting us! We have received your request and will respond to you as soon as possible, but no later than 24 hours.",
+  "emailSignature": "Best regards,",
+  "emailName": "Likewise Handyman Team"
+
 } 

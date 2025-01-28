@@ -52,5 +52,10 @@
   "ExteriorWallsWindowsAndDoorsDescription": "安装或更换外墙、窗户和门",
   "OtherOutdoorRemodelingDescription": "建造新的隔断墙、安装内门",
   "OurServices": "我们的服务",
-  "OurServicesDescription": "专注纽波特滨水区和泽西市的家居与办公室维修翻新服务！无论是地板安装、墙体修复、厨房浴室升级、家具组装、照明安装，还是电气服务，我们的专业团队都能快速响应，满足您的需求。让我们帮助您打造理想空间，立即联系我们！"
+  "OurServicesDescription": "专注纽波特滨水区和泽西市的家居与办公室维修翻新服务！无论是地板安装、墙体修复、厨房浴室升级、家具组装、照明安装，还是电气服务，我们的专业团队都能快速响应，满足您的需求。让我们帮助您打造理想空间，立即联系我们！",
+  "emailSubject": "我们收到您的消息",
+  "emailBody": "感谢您的联系！我们已收到您的请求，并将在24小时内回复。",
+  "emailSignature": "真诚地，",
+  "emailName": "Likewise Handyman 团队",
+  "emailGreeting": "尊敬的 "
 } 

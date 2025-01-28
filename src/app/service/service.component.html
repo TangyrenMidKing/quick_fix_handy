@@ -6,7 +6,7 @@
     </p>
   </div>
   <div class="services-content-block">
-    <mat-card class="card" *ngFor="let card of cards">
+    <mat-card class="card" *ngFor="let card of cards" (click)="navigateToContact()">
       <mat-card-header>
         <mat-card-title>{{ card.title | translate }}</mat-card-title>
       </mat-card-header>

@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { EmailService } from '../_service/email_service';
 
 @Component({
@@ -32,13 +32,14 @@ export class ContactComponent {
   isSubmitting: boolean = false;
   showContactResult: boolean = false;
 
-  constructor(private fb: FormBuilder, private emailService: EmailService) {
+  constructor(private fb: FormBuilder, private emailService: EmailService, private translate: TranslateService) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       email: ['', [Validators.required, Validators.email]],
       preferredTime: ['', Validators.required],
       address: ['', Validators.required],
+
 
       comment: [''],
     });
@@ -61,15 +62,29 @@ export class ContactComponent {
           customer_phone: this.contactForm.value.phone,
           customer_address: this.contactForm.value.address,
           customer_preferred_time: this.contactForm.value.preferredTime,
-          subject: 'New Service Request from ' + this.contactForm.value.name,
+          subject: '新预约请求来自' + this.contactForm.value.name,
           customer_comment: this.contactForm.value.comment,
         })
         .then(() => {
           console.log('Email sent successfully');
+          this.emailService.sendCustomerEmail(this.contactForm.value.email, 
+            this.translate.instant('emailSubject'), 
+            this.translate.instant('emailGreeting') + this.contactForm.value.name, 
+            this.translate.instant('emailBody'), 
+            this.translate.instant('emailSignature'), 
+            this.translate.instant('emailName'));
         })
+
+
+
+
         .catch((error) => {
           console.error('Error sending email:', error);
         });
+
+
+
+
     } else {
       console.log('Form is invalid');
       this.isSubmitting = false;
